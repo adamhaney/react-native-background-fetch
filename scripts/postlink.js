@@ -92,6 +92,7 @@ helpers.addToFrameworkSearchPaths(
 
 // extends the projects AppDelegate.m with our completion handler
 const projectGroup = project.findPBXGroupKey({ name: packageManifest.name });
+console.log('Adding ' + pathToAppdelegateExtension + ' to ' + projectGroup);
 project.addSourceFile(
     pathToAppdelegateExtension,
     { target: project.getFirstTarget().uuid },
